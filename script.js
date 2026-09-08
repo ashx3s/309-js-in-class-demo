@@ -1,6 +1,6 @@
 // access a dom node
 const pageTitle = document.getElementById("page-title");
-
+const stringExample = document.getElementById("string-example");
 // log the innerHTML of that dom node
 console.log(pageTitle.innerHTML);
 
@@ -43,3 +43,30 @@ const subtract = (a, b) => a - b;
 const divide = (a, b) => {
   return a / b;
 };
+
+// template literals `` are for mixing text with logic
+pageTitle.textContent = `The Answer is: <span> ${subtract(10, 5)}</span>`;
+
+stringExample.innerHTML =
+  "The Division Answer is" + " " + "<span>" + divide(20, 10) + "</span>";
+
+// access with dot notation
+const obj = {
+  name: "Johnny",
+  age: 900,
+  email: "johnny@iamsuperold.ca",
+};
+
+console.log(obj.name);
+// you can change the "properties" of a const if it has them like an object or an array
+// access properties of an object with . (dot notation)
+stringExample.textContent = obj.name;
+
+// array example
+
+const movies = ["How to train your dragon", "Hook", "Brave"];
+
+// access with [] bracket notation
+console.log("Log individual movie: ", movies[0]);
+
+movies.forEach((movie) => console.log("for Each Example: ", movie));
