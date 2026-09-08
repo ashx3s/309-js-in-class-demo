@@ -45,10 +45,9 @@ const divide = (a, b) => {
 };
 
 // template literals `` are for mixing text with logic
-pageTitle.textContent = `The Answer is: <span> ${subtract(10, 5)}</span>`;
+pageTitle.innerHTML = `The Answer is: <span> ${subtract(10, 5)}</span>`;
 
-stringExample.innerHTML =
-  "The Division Answer is" + " " + "<span>" + divide(20, 10) + "</span>";
+stringExample.textContent = "The Division Answer is" + " " + divide(20, 10);
 
 // access with dot notation
 const obj = {
