@@ -14,3 +14,10 @@ const galleryImages = [
     altTag: "A ferris wheel at a fair or something.",
   },
 ];
+
+// create the parent element
+galleryImages.forEach((image) => {
+  // create the child element
+  // set the attributes
+  // append to the parent element
+});
