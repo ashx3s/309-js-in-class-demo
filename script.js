@@ -68,7 +68,7 @@ console.log(obj.name);
 // access properties of an object with . (dot notation)
 stringExample.textContent = obj.name;
 
-// array example
+/* ------------------array example-------------------*/
 
 const movies = ["How to train your dragon", "Hook", "Brave"];
 
@@ -77,7 +77,21 @@ console.log("Log individual movie: ", movies[0]);
 
 movies.forEach((movie) => console.log("for Each Example: ", movie));
 
-// EVENTS
+// Render to the DOM
+
+// attach to a ul dom node
+const ul = document.getElementById("movie-ul");
+// for each movie, create a list element and add the list element to a ul
+movies.forEach((movie) => {
+  //  create a li dom node (?? how do we do this??)
+  const li = document.createElement("li");
+  // attach to text Content the string information for the element in the array
+  li.textContent = movie;
+  // push the lis into the ul
+  ul.appendChild(li);
+});
+
+/* ----------------EVENTS---------------- */
 // creat the dom node in js
 const logBtn = document.getElementById("log-btn");
 const alertBtn = document.getElementById("alert-btn");
