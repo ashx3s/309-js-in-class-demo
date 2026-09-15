@@ -30,6 +30,11 @@ if (userAge > 512) {
 // function declarations can be invoked before they are declared
 console.log("Addition Function: ", add(100, 22));
 
+const x = 5;
+const y = 10;
+
+console.log(add(x, y));
+
 function add(a, b) {
   if (isNaN(b) || isNaN(a)) {
     console.error("b or a is not a number");
@@ -39,6 +44,8 @@ function add(a, b) {
 
 // Fat arrow functions
 const subtract = (a, b) => a - b;
+
+const scoreAfterPenalty = subtract(10, 7);
 
 const divide = (a, b) => {
   return a / b;
@@ -69,3 +76,31 @@ const movies = ["How to train your dragon", "Hook", "Brave"];
 console.log("Log individual movie: ", movies[0]);
 
 movies.forEach((movie) => console.log("for Each Example: ", movie));
+
+// EVENTS
+// creat the dom node in js
+const logBtn = document.getElementById("log-btn");
+const alertBtn = document.getElementById("alert-btn");
+
+function logMsg() {
+  console.log("Hello Event Listener");
+}
+// add an event listener to it for clicks
+// when the button is clicked, log a message using a named function
+logBtn.addEventListener("click", logMsg);
+
+alertBtn.addEventListener("click", () => {
+  alert("Hello Anonymous Function");
+});
+
+const printToDom = document.getElementById("print-to-dom");
+
+printToDom.addEventListener("click", () => {
+  const pMsg = document.getElementById("node-to-print-to");
+
+  if (pMsg.textContent === "") {
+    pMsg.textContent = "I have been printed!!!!";
+  } else {
+    pMsg.textContent = "";
+  }
+});
